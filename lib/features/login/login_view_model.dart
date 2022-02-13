@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kirkuc_numara/core/constants/navigation_constants.dart';
 import 'package:mobx/mobx.dart';
 import '../../core/base/base_view_model.dart';
 
@@ -45,7 +46,7 @@ abstract class _LoginViewModel with Store, BaseViewModel {
       if (formState!.currentState!.validate()) {
         formState!.currentState!.save();
         await authService.signInWithEmailAndPassword(email!, password!);
-        await navigationManager.navigate(path: '/home');
+        navigateToHomePage();
       }
     } catch (e) {
       debugPrint(e.toString());
@@ -53,10 +54,10 @@ abstract class _LoginViewModel with Store, BaseViewModel {
   }
 
   Future<void> navigateToHomePage() async {
-    await navigationManager.navigate(path: '/home');
+    await navigationManager.navigate(path: NavigationConstants.home);
   }
 
   Future<void> navigateToSignUpPage() async {
-    await navigationManager.navigate(path: '/signup');
+    await navigationManager.navigate(path: NavigationConstants.signup);
   }
 }

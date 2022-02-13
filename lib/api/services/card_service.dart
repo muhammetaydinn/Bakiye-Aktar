@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../constants/firebase_collection_keys.dart';
+import '../models/card_model.dart';
 import 'i_service.dart';
 
 class CardService extends IService {
@@ -22,9 +23,11 @@ class CardService extends IService {
     );
   }
 
-  Future<dynamic> getCard() async {
-    var data = await docRef(collectionPath).get();
-    return data.data();
+  Future<CardDataModel> getCard() async {
+    var doc = await docRef(collectionPath).get();
+    Map<String, dynamic> json = doc.data()! as Map<String, dynamic>;
+    var cardModel = CardDataModel.fromJson(json);
+    return cardModel;
   }
 
   Future<void> addTransaction(dynamic transaction) async {

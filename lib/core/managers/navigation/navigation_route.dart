@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kirkuc_numara/features/login/login_view.dart';
 import '../../../components/page/page_not_found.dart';
+import '../../../features/add_card/add_card_view.dart';
 import '../../../features/signup/signup_view.dart';
 import '../../constants/navigation_constants.dart';
 
@@ -22,6 +23,9 @@ class NavigationRoute {
 
       case NavigationConstants.signup:
         return defaultNavigate(const SignupView());
+
+      case NavigationConstants.addcard:
+        return defaultNavigate(const AddCardView());
 
       default:
         return defaultNavigate(const PageNotFound());
