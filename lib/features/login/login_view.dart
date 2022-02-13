@@ -30,35 +30,42 @@ class LoginView extends StatelessWidget {
                   flex: 6,
                   child: Form(
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        TextFormField(
-                          controller: viewModel.emailController,
-                          onSaved: (email) {
-                            viewModel.email = email;
-                          },
-                          validator: (value) {
-                            if (value == null || value.isEmpty) return 'Lütfen e-posta adresinizi giriniz';
-                            return null;
-                          },
+                        Expanded(
+                          child: TextFormField(
+                            controller: viewModel.emailController,
+                            onSaved: (email) {
+                              viewModel.email = email;
+                            },
+                            validator: (value) {
+                              if (value == null || value.isEmpty) return 'Lütfen e-posta adresinizi giriniz';
+                              return null;
+                            },
+                          ),
                         ),
-                        TextFormField(
-                          controller: viewModel.passwordController,
-                          onSaved: (password) {
-                            viewModel.password = password;
-                          },
-                          validator: (value) {
-                            if (value == null || value.isEmpty) {
-                              return 'Lütfen şifrenizi giriniz';
-                            } else if (value.length < 6) {
-                              return 'Şifreniz minimum 6 karakter olabilir';
-                            }
-                            return null;
-                          },
+                        Expanded(
+                          child: TextFormField(
+                            controller: viewModel.passwordController,
+                            onSaved: (password) {
+                              viewModel.password = password;
+                            },
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return 'Lütfen şifrenizi giriniz';
+                              } else if (value.length < 6) {
+                                return 'Şifreniz minimum 6 karakter olabilir';
+                              }
+                              return null;
+                            },
+                          ),
                         ),
-                        OutlinedButton(
-                          onPressed: () => viewModel.login(),
-                          child: Center(
-                            child: Text('Giriş Yap', style: context.textTheme.subtitle1!.copyWith(color: Colors.white)),
+                        Expanded(
+                          child: OutlinedButton(
+                            onPressed: () => viewModel.login(),
+                            child: Center(
+                              child: Text('Giriş Yap', style: context.textTheme.subtitle1!.copyWith(color: Colors.white)),
+                            ),
                           ),
                         ),
                       ],

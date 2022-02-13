@@ -24,17 +24,17 @@ class _BaseViewState<T extends Store> extends State<BaseView<T>> {
 
   @override
   void initState() {
-    super.initState();
     viewModel = widget.viewModel;
     widget.onViewModelReady(viewModel);
+    super.initState();
   }
 
   @override
   void dispose() {
+    super.dispose();
     if (widget.onDispose != null) {
       widget.onDispose!(viewModel);
     }
-    super.dispose();
   }
 
   @override

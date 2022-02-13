@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kirkuc_numara/features/login/login_view.dart';
+import '../../../components/page/page_not_found.dart';
+import '../../../features/signup/signup_view.dart';
 import '../../constants/navigation_constants.dart';
 
 class NavigationRoute {
@@ -14,8 +17,14 @@ class NavigationRoute {
       case NavigationConstants.home:
         return defaultNavigate(Container());
 
+      case NavigationConstants.login:
+        return defaultNavigate(const LoginView());
+
+      case NavigationConstants.signup:
+        return defaultNavigate(const SignupView());
+
       default:
-        return defaultNavigate(Container());
+        return defaultNavigate(const PageNotFound());
     }
   }
 

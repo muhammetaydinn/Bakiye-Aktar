@@ -8,9 +8,9 @@ import '../managers/navigation/navigation_manager.dart';
 abstract class BaseViewModel {
   BuildContext? context;
 
-  final AuthService authService = AuthService.instance;
-  final UserService userService = UserService.instance;
-  final CardService cardService = CardService.instance;
+  final AuthService authService = AuthService();
+  final UserService userService = UserService();
+  final CardService cardService = CardService();
 
   final NavigationManager navigationManager = NavigationManager.instance;
 
