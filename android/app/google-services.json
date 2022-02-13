@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "947739632652",
+    "project_id": "numara-40bae",
+    "storage_bucket": "numara-40bae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947739632652:android:0117ad69d7eb23216ffa29",
+        "android_client_info": {
+          "package_name": "com.example.kirkuc_numara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947739632652-pbvoh1sag1nfc6m587b14jucsmeh7e4f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCskpy0oP1jh5irfFIR2hAr4n4NOsJxuas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947739632652-pbvoh1sag1nfc6m587b14jucsmeh7e4f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "947739632652-r647fh91dlj28frs08rdcngrnas0mh1f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kirkucNumara"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
