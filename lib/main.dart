@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'core/constants/app_constants.dart';
 import 'core/managers/theme/theme_manager.dart';
+import 'features/home/home_view.dart';
 import 'features/login/login_view.dart';
 
 Future<void> main() async {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeManager.instance.themeData,
       //onGenerateRoute: NavigationRoute.instance.generateRoute,
       //navigatorKey: NavigationManager.instance.navigatorKey,
-      home: const LoginView(),
+      home: const HomeView(),
     );
   }
 }

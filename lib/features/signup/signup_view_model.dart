@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import '../../core/base/base_view_model.dart';
+import '../../core/constants/navigation_constants.dart';
 
 part 'signup_view_model.g.dart';
 
@@ -40,7 +41,7 @@ abstract class _SignupViewModel with Store, BaseViewModel {
       if (formState!.currentState!.validate()) {
         formState!.currentState!.save();
         await authService.createUser(email!, password!, name!);
-        await navigationManager.navigate(path: '/home');
+        await navigateToHomePage();
       }
     } catch (e) {
       debugPrint(e.toString());
@@ -48,6 +49,6 @@ abstract class _SignupViewModel with Store, BaseViewModel {
   }
 
   Future<void> navigateToHomePage() async {
-    await navigationManager.navigate(path: '/home');
+    await navigationManager.navigate(path: NavigationConstants.home);
   }
 }
