@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kirkuc_numara/constants/color_constant.dart';
-import 'package:kirkuc_numara/login_page.dart';
-import 'package:kirkuc_numara/sign_up_page.dart';
+import 'package:flutter_application_7/constants/color_constant.dart';
+import 'package:flutter_application_7/login_page.dart';
+import 'package:flutter_application_7/sign_up_page.dart';
 
 class Hosgeldin extends StatefulWidget {
   const Hosgeldin({Key? key}) : super(key: key);

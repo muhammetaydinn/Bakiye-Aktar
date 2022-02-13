@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirkuc_numara/notifications.dart';
+import 'package:flutter_application_7/notifications.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -34,7 +34,7 @@ class _MainPageState extends State<MainPage> {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return NotificationPage();
+                    return MyStatelessWidget();
                   },
                 ),
               );

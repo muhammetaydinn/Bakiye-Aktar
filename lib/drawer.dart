@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:kirkuc_numara/constants/color_constant.dart';
-import 'package:kirkuc_numara/pages/abonman_aktar_page.dart';
-import 'package:kirkuc_numara/pages/bize_ulasin_page.dart';
-import 'package:kirkuc_numara/pages/kart_ekle_page.dart';
-import 'package:kirkuc_numara/pages/sik_kullanilanlar.dart';
-import 'package:kirkuc_numara/pages/yakinimda_ne_var_page.dart';
-import 'package:kirkuc_numara/pages/yardim_page.dart';
+import 'package:flutter_application_7/credit_card.dart';
+import 'package:flutter_application_7/pages/abonman_aktar_page.dart';
+import 'package:flutter_application_7/constants/color_constant.dart';
+import 'package:flutter_application_7/pages/bize_ulasin_page.dart';
+import 'package:flutter_application_7/pages/kart_ekle_page.dart';
+import 'package:flutter_application_7/pages/profile.dart';
+import 'package:flutter_application_7/pages/yakinimda_ne_var_page.dart';
+import 'package:flutter_application_7/pages/yardim_page.dart';
+import 'package:flutter_application_7/screens/profile_body.dart';
 
 class NavigationDrawerWidget extends StatefulWidget {
   const NavigationDrawerWidget({Key? key}) : super(key: key);
@@ -59,6 +61,13 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
               ),
             ),
             buildMenuItem(
+                text: "Profil",
+                icon: Icons.person,
+                onClicked: () => selectedItem(context, 2)),
+            SizedBox(
+              height: size.height * 0.02,
+            ),
+            buildMenuItem(
                 text: "Abonman Aktar",
                 icon: Icons.send,
                 onClicked: () => selectedItem(context, 0)),
@@ -69,13 +78,6 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                 text: "Kart Ekle",
                 icon: Icons.add_card,
                 onClicked: () => selectedItem(context, 1)),
-            SizedBox(
-              height: size.height * 0.02,
-            ),
-            buildMenuItem(
-                text: "Sık Kullanılanlar",
-                icon: Icons.star_border,
-                onClicked: () => selectedItem(context, 2)),
             SizedBox(
               height: size.height * 0.02,
             ),
@@ -143,12 +145,12 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
         break;
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const AddCardView(),
+          builder: (context) => const CreditCard(),
         ));
         break;
       case 2:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const FavoritesView(),
+          builder: (context) => const ProfilePage(),
         ));
         break;
       case 3:

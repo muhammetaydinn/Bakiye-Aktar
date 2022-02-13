@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirkuc_numara/constants/color_constant.dart';
+import 'package:flutter_application_7/constants/color_constant.dart';
 
 class AddCardView extends StatelessWidget {
   const AddCardView({Key? key}) : super(key: key);
