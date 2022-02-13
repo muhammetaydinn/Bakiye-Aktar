@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:flutter_application_7/drawer.dart';
+import 'package:flutter_application_7/notifications.dart';
 
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:kirkuc_numara/drawer.dart';
-import 'package:kirkuc_numara/notifications.dart';
 
 import '../constants/color_constant.dart';
 import '../models/card_model.dart';
@@ -29,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     return result;
   }
-
+//selam
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return NotificationPage();
+                    return MyStatelessWidget();
                   },
                 ),
               );
@@ -147,15 +146,6 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           Positioned(
-                            right: 21,
-                            top: 35,
-                            child: Image.asset(
-                              cards[index].cardType,
-                              width: 27,
-                              height: 27,
-                            ),
-                          ),
-                          Positioned(
                             left: 29,
                             bottom: 45,
                             child: Text(
@@ -177,28 +167,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: kWhiteColor),
                             ),
                           ),
-                          Positioned(
-                            left: 202,
-                            bottom: 45,
-                            child: Text(
-                              'SKT',
-                              style: GoogleFonts.inter(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400,
-                                  color: kWhiteColor),
-                            ),
-                          ),
-                          Positioned(
-                            left: 202,
-                            bottom: 21,
-                            child: Text(
-                              cards[index].cardExpired,
-                              style: GoogleFonts.inter(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w700,
-                                  color: kWhiteColor),
-                            ),
-                          )
                         ],
                       ),
                     );
@@ -214,7 +182,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      'Operation',
+                      'Hareketler',
                       style: GoogleFonts.inter(
                           fontSize: 18,
                           fontWeight: FontWeight.w700,
@@ -271,7 +239,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(
                     left: 16, bottom: 13, top: 29, right: 10),
                 child: Text(
-                  'Transaction Histories',
+                  'İşlem geçmişleri',
                   style: GoogleFonts.inter(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,

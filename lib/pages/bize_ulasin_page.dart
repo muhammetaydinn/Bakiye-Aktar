@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kirkuc_numara/app_text_style.dart';
+import 'package:flutter_application_7/app_text_style.dart';
 
 class ContactUsView extends StatelessWidget {
   const ContactUsView({Key? key}) : super(key: key);

@@ -13,21 +13,23 @@ class CardModel {
       this.cardBackground, this.cardElementTop, this.cardElementBottom);
 }
 
-List<CardModel> cards = cardData.map(
-  (item) => CardModel(
-    item["user"] as String,
-    item['cardNumber']as String,
-    item['cardExpired']as String,
-    item['cardType']as String,
-    item['cardBackground']  as int,
-    item['cardElementTop']as String,
-    item['cardElementBottom']as String,
-  ),
-).toList();
+List<CardModel> cards = cardData
+    .map(
+      (item) => CardModel(
+        item["user"] as String,
+        item['cardNumber'] as String,
+        item['cardExpired'] as String,
+        item['cardType'] as String,
+        item['cardBackground'] as int,
+        item['cardElementTop'] as String,
+        item['cardElementBottom'] as String,
+      ),
+    )
+    .toList();
 
 var cardData = [
   {
-    "user": "Amanda Alex",
+    "user": "Muhammet Aydın",
     "cardNumber": "**** **** **** 1425",
     "cardExpired": "03-01-2023",
     "cardType": "assets/images/mastercard_logo.png",
@@ -36,7 +38,7 @@ var cardData = [
     "cardElementBottom": "assets/svg/ellipse_bottom_pink.svg"
   },
   {
-    "user": "Amanda Alex",
+    "user": "Muhammet Bakırhan",
     "cardNumber": "**** **** **** 8287",
     "cardExpired": "03-01-2025",
     "cardType": "assets/images/mastercard_logo.png",

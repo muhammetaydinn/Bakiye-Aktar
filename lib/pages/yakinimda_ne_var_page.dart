@@ -4,8 +4,8 @@ import 'dart:async';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_7/constants/color_constant.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:kirkuc_numara/constants/color_constant.dart';
 import 'package:location/location.dart';
 
 class YakinimdaNeVar extends StatefulWidget {

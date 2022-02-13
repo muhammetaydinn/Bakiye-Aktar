@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors_in_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:kirkuc_numara/constants/color_constant.dart';
-import 'package:kirkuc_numara/login_page.dart';
-
+import 'package:flutter_application_7/constants/color_constant.dart';
+import 'package:flutter_application_7/login_Page.dart';
+import 'package:flutter_application_7/main_page.dart';
 
 import 'screens/home_screen.dart';
 

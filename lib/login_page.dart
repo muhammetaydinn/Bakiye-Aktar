@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:kirkuc_numara/constants/color_constant.dart';
-import 'package:kirkuc_numara/sign_up_page.dart';
-
+import 'package:flutter_application_7/constants/color_constant.dart';
+import 'package:flutter_application_7/sign_up_page.dart';
 
 import 'screens/home_screen.dart';
 

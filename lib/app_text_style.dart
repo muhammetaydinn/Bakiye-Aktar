@@ -1,7 +1,7 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:kirkuc_numara/constants/color_constant.dart';
+import 'package:flutter_application_7/constants/color_constant.dart';
 
 class ApptextStyle {
   static const TextStyle MY_CARD_TITLE = TextStyle(
