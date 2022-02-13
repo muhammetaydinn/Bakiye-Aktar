@@ -15,6 +15,11 @@ class SignupView extends StatelessWidget {
         viewModel.setContext(context);
         viewModel.init();
       },
+      onDispose: (viewModel) {
+        viewModel.nameController!.dispose();
+        viewModel.emailController!.dispose();
+        viewModel.passwordController!.dispose();
+      },
       builder: (BuildContext context, SignupViewModel viewModel) {
         return Scaffold(
           resizeToAvoidBottomInset: false,

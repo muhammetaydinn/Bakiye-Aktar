@@ -32,6 +32,9 @@ abstract class _HomeViewModel with Store, BaseViewModel {
   Future<void> getUserCard() async {
     _changeLoading();
     cardData = await cardService.getCard();
+    if (cardData == null) {
+      navigateToAddCardPage();
+    }
     _changeLoading();
   }
 
