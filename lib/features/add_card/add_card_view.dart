@@ -14,6 +14,9 @@ class AddCardView extends StatelessWidget {
         viewModel.setContext(context);
         viewModel.init();
       },
+      onDispose: (viewModel) {
+        viewModel.cardNumberController!.dispose();
+      },
       builder: (BuildContext context, AddCardViewModel viewModel) {
         return Scaffold();
       },
