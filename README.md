@@ -1,6 +1,7 @@
 # kirkuc_numara
 
-A new Flutter project.
+Flutter hackaton yarışması.
+Arka kısmınla birleştirmeye zaman yetmedi
 
 ## Getting Started
 
